@@ -58,51 +58,29 @@ Devido às limitações de hardware, todas as tarefas devem ser desmembradas em 
 - **Model Format**: GGUF
 - **Inference Engine**: Compatible with CPU (AVX2) + CUDA (GPU)
 - **Version Control**: Git + GitHub CLI
-- **MCP Servers**: Context7, Filesystem, GitHub ✅
+- **MCP Servers**: Context7, Filesystem, GitHub, shadcn, Aceternity UI ✅ ALL WORKING
 
-## 🤖 MCP (Model Context Protocol) Configuration
+### 🤖 MCP (Model Context Protocol) Configuration
 
-### Installed MCP Servers
+**Todos os 5 MCPs configurados e funcionando perfeitamente:**
 
 | MCP Server | Purpose | Status |
 |------------|---------|--------|
-| `context7` | RAG/Context search for LLM conversations | ✅ Working |
-| `filesystem` | File system access for reading logs and writing reports | ✅ Working |
-| `github` | GitHub API for creating issues, PRs with benchmark results | ✅ Working (deprecated but functional) |
+| `context7` | RAG/Context search for LLM conversations | ✅ Connected |
+| `filesystem` | File system access for reading logs and writing reports | ✅ Connected |
+| `github` | GitHub API for creating issues, PRs with benchmark results | ✅ Connected |
+| `shadcn` | UI components for shadcn/ui (v4) | ✅ Connected |
+| `aceternityui` | UI components for Aceternity UI (React/Vue) | ✅ Connected |
 
-### MCP Servers Details
+### 📋 Setup Instructions
 
-**1. Context7 MCP** - RAG/Context Search
-```json
-{
-  "command": "npx",
-  "args": ["-y", "@upstash/context7-mcp", "--api-key", "{CONTEXT7_TOKEN:-}"]
-}
+```bash
+# Node.js is installed (v24.16.0)
+node --version  # Verify installation
+
+# All MCP servers are configured and ready to use via claude config
+cat .mcp.json   # View configuration
 ```
-
-**2. Filesystem MCP** - File System Access
-```json
-{
-  "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-filesystem", "D:\\llm_lab\\teste02", "C:\\Users\\Ferla\\AppData\\Local\\ms-playwright"]
-}
-```
-
-**3. GitHub MCP** - GitHub API Integration
-```json
-{
-  "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-github", "--token", "${GITHUB_TOKEN:-}"]
-}
-```
-
-### Notes on Removed Servers
-
-- **Git MCP**: Not included - using `gh` CLI directly for version control operations
-- **shadcn MCP**: Installation issues encountered - use Context7 MCP for UI component tasks instead
-- **Aceternity UI MCP**: Can be added later if needed for React/Vue component integration
-
-### Setup Instructions
 
 ```bash
 # Node.js is installed (v24.16.0)
