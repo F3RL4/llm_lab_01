@@ -25,19 +25,28 @@
 
 ### MCP Servers Configuration
 
-**Active & Working:**
-- **Context7**: ✅ RAG/Context search for LLM conversations
-- **Filesystem**: ✅ File system access for logs and reports
-- **GitHub**: ✅ GitHub API integration (deprecated but functional)
+**🟢 ALL 5 MCP SERVERS OPERATIONAL:**
 
-**Notes on Unavailable:**
-- Git MCP: Not included - using `gh` CLI directly
-- shadcn MCP: Installation issues encountered
-- Aceternity UI MCP: Can be added later if needed
-- Playwright MCP: Use Playwright directly (npm global install)
+| Server | Status | Purpose |
+|--------|--------|---------|
+| **context7** | ✅ Connected | RAG/Context search for semantic queries and benchmark data |
+| **filesystem** | ✅ Connected | File system access for logs, reports, project files |
+| **github** | ✅ Connected | GitHub API for issues, PRs with benchmark results |
+| **shadcn** | ✅ Connected | shadcn/ui v4 components - UI development tasks |
+| **aceternityui** | ✅ Connected | Aceternity UI components - React/Vue animations and UI elements |
+
+### MCP Usage Guidelines
+
+- **ALL MCP SERVERS AUTOMATICALLY AVAILABLE** via `.mcp.json` configuration
+- Use `context7` for semantic search, context retrieval, benchmark queries
+- Use `filesystem` for file operations in project directory
+- Use `github` for API operations (issues, PRs)
+- Use `shadcn` for UI component code and demos
+- Use `aceternityui` for React/Vue component integration
 
 ## Compatibility
+
 - ✅ GGUF format models (Qwen3.5-9B)
 - ✅ CPU inference with AVX2 support
 - ✅ GPU acceleration via CUDA (RTX 4050)
-- ✅ MCP servers fully operational (Context7, Filesystem, GitHub)
+- ✅ ALL 5 MCP servers fully operational (Context7, Filesystem, GitHub, shadcn, Aceternity UI)
