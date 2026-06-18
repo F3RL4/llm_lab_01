@@ -57,8 +57,8 @@ Devido às limitações de hardware, todas as tarefas devem ser desmembradas em 
 - **LLM Runtime**: LM Studio
 - **Model Format**: GGUF
 - **Inference Engine**: Compatible with CPU (AVX2) + CUDA (GPU)
-- **Version Control**: Git + GitHub
-- **MCP Servers**: Context7, shadcn, Aceternity, Playwright ✅
+- **Version Control**: Git + GitHub CLI
+- **MCP Servers**: Context7, Filesystem, GitHub ✅
 
 ## 🤖 MCP (Model Context Protocol) Configuration
 
@@ -66,23 +66,52 @@ Devido às limitações de hardware, todas as tarefas devem ser desmembradas em 
 
 | MCP Server | Purpose | Status |
 |------------|---------|--------|
-| `context7` | RAG/Context search for LLM conversations | ✅ Installed |
-| `shadcn` | UI components for shadcn/ui | ✅ Installed |
-| `aceternityui` | UI components for Aceternity UI | ✅ Installed |
-| `playwright` | Web automation testing with Playwright | ✅ Installed |
+| `context7` | RAG/Context search for LLM conversations | ✅ Working |
+| `filesystem` | File system access for reading logs and writing reports | ✅ Working |
+| `github` | GitHub API for creating issues, PRs with benchmark results | ✅ Working (deprecated but functional) |
 
-### API Keys & Credentials
+### MCP Servers Details
 
-- **Context7 API Key**: Configured in `.mcp.json`
+**1. Context7 MCP** - RAG/Context Search
+```json
+{
+  "command": "npx",
+  "args": ["-y", "@upstash/context7-mcp", "--api-key", "{CONTEXT7_TOKEN:-}"]
+}
+```
+
+**2. Filesystem MCP** - File System Access
+```json
+{
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-filesystem", "D:\\llm_lab\\teste02", "C:\\Users\\Ferla\\AppData\\Local\\ms-playwright"]
+}
+```
+
+**3. GitHub MCP** - GitHub API Integration
+```json
+{
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-github", "--token", "${GITHUB_TOKEN:-}"]
+}
+```
+
+### Notes on Removed Servers
+
+- **Git MCP**: Not included - using `gh` CLI directly for version control operations
+- **shadcn MCP**: Installation issues encountered - use Context7 MCP for UI component tasks instead
+- **Aceternity UI MCP**: Can be added later if needed for React/Vue component integration
 
 ### Setup Instructions
 
 ```bash
-# Node.js is now installed (v24.16.0)
+# Node.js is installed (v24.16.0)
 node --version  # Verify installation
 
-# MCP servers are configured and ready to use
-cat .mcp.json   # View configuration
+# View MCP configuration
+cat .mcp.json   # View current configuration
+
+# All MCP servers are configured and ready to use via claude config
 ```
 
 ---
