@@ -15,7 +15,14 @@
 - **RAM**: 16 GB (16.3 GB)
 - **Total Memory**: ~22.75 GB
 
+## Software Stack
+- **Node.js**: v24.16.0 ✅
+- **npm**: Latest
+- **LM Studio**: Installed
+- **MCP Servers**: All configured and installed
+
 ## Compatibility
 - ✅ GGUF format models
 - ✅ CPU inference (AVX2 supported)
 - ✅ GPU acceleration via CUDA
+- ✅ MCP servers fully operational

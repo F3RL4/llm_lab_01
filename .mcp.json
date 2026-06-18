@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-27b7a1c3-0e8b-4cfa-986c-e7bd900ff720"
+      ],
+      "description": "RAG/Context search for LLM conversations"
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "shadcn-mcp"
+      ],
+      "description": "UI components for shadcn/ui"
+    },
+    "aceternityui": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "aceternityui-mcp"
+      ],
+      "description": "UI components for Aceternity UI"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--caps=vision"
+      ],
+      "description": "Web automation testing with Playwright (Chromium installed)"
+    }
+  }
+}

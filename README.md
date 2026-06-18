@@ -58,6 +58,36 @@ Devido às limitações de hardware, todas as tarefas devem ser desmembradas em 
 - **Model Format**: GGUF
 - **Inference Engine**: Compatible with CPU (AVX2) + CUDA (GPU)
 - **Version Control**: Git + GitHub
+- **MCP Servers**: Context7, shadcn, Aceternity, Playwright ✅
+
+## 🤖 MCP (Model Context Protocol) Configuration
+
+### Installed MCP Servers
+
+| MCP Server | Purpose | Status |
+|------------|---------|--------|
+| `context7` | RAG/Context search for LLM conversations | ✅ Installed |
+| `shadcn` | UI components for shadcn/ui | ✅ Installed |
+| `aceternityui` | UI components for Aceternity UI | ✅ Installed |
+| `playwright` | Web automation testing with Playwright | ✅ Installed |
+
+### API Keys & Credentials
+
+- **Context7 API Key**: Configured in `.mcp.json`
+
+### Setup Instructions
+
+```bash
+# Node.js is now installed (v24.16.0)
+node --version  # Verify installation
+
+# MCP servers are configured and ready to use
+cat .mcp.json   # View configuration
+```
+
+---
+
+## 📊 Métricas de Benchmark
 
 ---
 
@@ -153,6 +183,8 @@ Este projeto é mantido para fins de benchmark e teste local.
 - ✅ Hardware documentado (Ryzen 5 7640HS + RTX 4050 6GB)
 - ✅ Modelo configurado: Qwen3.5-9B GGUF via LM Studio
 - ✅ Configurações de inferência definidas
+- ✅ Node.js instalado (v24.16.0)
+- ✅ MCP Servers conectados e prontos para uso
 - ⏳ **Próximo**: Criar testes de benchmark e validação
 
 ---

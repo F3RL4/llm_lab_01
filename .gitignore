@@ -19,3 +19,7 @@ Thumbs.db
 
 # MCP configuration (local only)
 .mcp.json
+
+# Node modules
+node_modules/
+*.lock
