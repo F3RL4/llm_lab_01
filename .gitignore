@@ -20,8 +20,6 @@ Thumbs.db
 # MCP configuration (local only)
 .mcp.json
 
-# Project memory (persistent across sessions)
-memory/
 
 # Node modules
 node_modules/

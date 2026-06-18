@@ -31,7 +31,7 @@
 
 ```
 llm_lab_01/
-├── CLAUDE.md          # This file - project rules
+├── CLAUDE.md          # This file - project rules (ALWAYS ENGLISH)
 ├── README.md           # Main documentation (update always!)
 ├── docs/               # Documentation files
 │   ├── hardware.md     # Hardware specs
@@ -40,7 +40,10 @@ llm_lab_01/
 ├── config/             # Configuration files
 ├── tests/              # Test files
 ├── scripts/            # Utility scripts
-└── logs/               # Execution logs
+├── logs/               # Execution logs
+├── memory/             # Session memory (persistent across sessions)
+│   └── *.md            # Memory files documenting state, decisions, guidance
+└── .gitignore          # Git ignore rules (memory tracked!)
 ```
 
 ## 🤖 Model & Hardware
@@ -53,7 +56,7 @@ llm_lab_01/
 
 ## 🤖 MCP Servers - AUTO USAGE (ALWAYS AVAILABLE)
 
-**Todos os 5 MCPs estão configurados e funcionando. Use automaticamente conforme necessário:**
+**All 5 MCPs are configured and working. Use them automatically as needed:**
 
 | MCP Server | Purpose | When to Use |
 |------------|---------|-------------|
@@ -88,6 +91,63 @@ llm_lab_01/
    
 5. **Aceternity UI MCP**: Aceternity UI component library (React/Vue)
    - Use for: Getting component info, installation, examples
+
+## 🧠 Session Memory Management (ALWAYS CREATE)
+
+**Project memory files must be created in `memory/` directory to persist facts, guidance, and project state across sessions.**
+
+### When to Create Memory Files:
+
+- **After installing/configuring new MCP servers** - Document which servers are operational
+- **When completing complex multi-step tasks** - Record decisions, approaches, and outcomes
+- **When encountering errors or blockers** - Document the issue and attempted solutions
+- **When making significant architectural decisions** - Capture rationale and trade-offs
+- **After major documentation updates** - Link related memory files with cross-references
+
+### Memory File Format:
+
+```markdown
+---
+name: <short-kebab-case-slug>
+description: <one-line summary — used to decide relevance during recall>
+metadata:
+  type: user | feedback | project | reference
+---
+
+<the fact; for feedback/project, follow with **Why:** and **How to apply:** lines. Link related memories with [[their-name]].>
+```
+
+### Memory Categories:
+
+- **user** - Who the user is (role, expertise, preferences)
+- **feedback** - Guidance on how to work, corrections, confirmed approaches (include why)
+- **project** - Ongoing work, goals, constraints not derivable from code/git history
+- **reference** - External resources (URLs, dashboards, tickets)
+
+### Cross-Referencing:
+
+- Link related memories liberally with `[[name]]` format
+- A link to a non-existent memory is fine - it marks something worth creating later
+- Do not save what the repo already records (code structure, past fixes, git history)
+
+## ⏰ Timeout Error Handling (ALWAYS APPLY)
+
+**When encountering "API Error: The operation timed out", automatically continue from where you left off.**
+
+### Automatic Recovery Strategy:
+
+1. **Identify the last completed step** - Review recent commits and task state
+2. **Preserve context** - Maintain working directory state if possible
+3. **Resume execution** - Proceed as if the user typed "continue"
+4. **Document recovery** - Update documentation with what was resumed
+
+### Examples of Recovery:
+
+- If installation timed out → Re-run installation commands from last successful state
+- If benchmark generation timed out → Resume from last completed benchmark configuration
+- If documentation update timed out → Continue updating remaining sections
+
+**Rule**: Never ask "should I continue?" - automatically resume from the last completed state.
 
 ## 🏷️ Commit Message Format
 
