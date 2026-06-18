@@ -40,6 +40,16 @@ Devido às limitações de hardware, todas as tarefas devem ser desmembradas em 
 - **Strategy**: Break down complex tasks into smaller, independent steps
 - **Commit frequency**: Each step should be committed and pushed separately
 
+### 📝 Regra de Documentação (OBRIGATÓRIO)
+
+**Antes de qualquer commit, atualize:**
+
+1. **README.md** - Documente progresso do POC/POV
+2. **docs/llm-specs.md** - Especificações do modelo e mudanças
+3. **docs/benchmarks.md** - Novos resultados de benchmarking
+
+> ✅ **Regra**: Toda alteração = Atualizar README + docs relevantes!
+
 ---
 
 ## 🛠️ Stack Tecnológico
@@ -55,7 +65,8 @@ Devido às limitações de hardware, todas as tarefas devem ser desmembradas em 
 
 ```
 llm_lab_01/
-├── README.md                    # Este arquivo
+├── CLAUDE.md                    # Diretrizes do Claude (CRÍTICO!)
+├── README.md                    # Este arquivo - update sempre!
 ├── docs/                        # Documentação completa
 │   ├── hardware.md              # Detalhes do hardware
 │   ├── llm-specs.md            # Especificações do modelo
@@ -133,6 +144,16 @@ Este projeto servirá como benchmark para:
 ## ⚖️ License
 
 Este projeto é mantido para fins de benchmark e teste local.
+
+---
+
+## 📊 Status do POC
+
+- ✅ Projeto inicializado com estrutura completa
+- ✅ Hardware documentado (Ryzen 5 7640HS + RTX 4050 6GB)
+- ✅ Modelo configurado: Qwen3.5-9B GGUF via LM Studio
+- ✅ Configurações de inferência definidas
+- ⏳ **Próximo**: Criar testes de benchmark e validação
 
 ---
 
