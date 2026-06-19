@@ -102,13 +102,20 @@ cat .mcp.json   # View current configuration
 
 ```
 llm_lab_01/
+├── llama/                       # Branches dedicadas a produtos específicos
+│   └── chatbot-rag/             # RAG Chatbot com Llama 3
+│       ├── README.md            # Documentação do produto
+│       ├── src/                 # Implementação principal
+│       ├── config/              # Configurações (models, benchmarks)
+│       ├── tests/               # Testes unitários
+│       └── requirements.txt     # Dependências Python
 ├── CLAUDE.md                    # Diretrizes do Claude (CRÍTICO!)
 ├── README.md                    # Este arquivo - update sempre!
 ├── docs/                        # Documentação completa
 │   ├── hardware.md              # Detalhes do hardware
 │   ├── llm-specs.md            # Especificações do modelo
 │   └── benchmarks.md            # Resultados de benchmarking
-├── config/                      # Configurações
+├── config/                      # Configurações do lab
 │   ├── lmstudio-config.yaml    # Config LM Studio
 │   └── inference-config.json   # Config inferência
 ├── tests/                       # Testes e benchmarks
@@ -117,6 +124,11 @@ llm_lab_01/
 ├── scripts/                     # Scripts utilitários
 └── logs/                        # Logs de execução
 ```
+
+### 🌿 Branching Strategy
+
+- **`llama/chatbot-rag`**: RAG chatbot product using Llama 3 (local or API)
+- **`main`**: Template repository with MCP configuration and guidelines
 
 ---
 
