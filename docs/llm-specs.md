@@ -58,6 +58,32 @@
    - Installation info and usage examples
 
 ## Usage Notes
-- ⚠️ **Max reasoning time: 5 minutes**
+
+- ⚠️ **Max reasoning time: 5 minutes (300 seconds)**
 - Break tasks into smaller steps to avoid timeout
 - Use incremental commits for each step
+
+## 📋 Project Structure - EPICS & User Stories
+
+### EPICS.md
+Located at `qwen-chatbot-assistant/EPICS.md` - Contains all detailed User Stories for the Chatbot Multi-Purpose project with:
+- Core Chat Interface (Aceternity UI)
+- Dashboard Metrics (Real-time benchmarking)
+- Settings & Configuration Management
+- MCP Server Integration
+
+### Sprint Tracking
+Progress tracked in `sprint-status.yaml` - Updated after each development step.
+
+### GitHub Workflow
+1. Create Issue for each Epic in GitHub
+2. Develop User Stories incrementally
+3. Close Epic issue with implementation details
+4. Continue to next Epic
+
+---
+
+## 🚀 Current Development Phase: ETAPA 2
+- Creating detailed User Stories for each Epic
+- Defining acceptance criteria for each story
+- Preparing sprint tracking documentation

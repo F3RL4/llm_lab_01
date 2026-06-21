@@ -39,3 +39,45 @@
 - `performance_tests/` - Speed and efficiency tests
 - `accuracy_tests/` - Quality and correctness tests
 - `mcp_benchmarks/` - MCP server performance and reliability tests
+
+## 📊 Project Development Tracking
+
+### EPICS & User Stories
+- **Location**: `qwen-chatbot-assistant/EPICS.md`
+- **Purpose**: Detailed User Stories for Chatbot Multi-Purpose development
+- **Structure**: Divided into Epics with acceptance criteria per User Story
+
+### Sprint Status
+- **File**: `sprint-status.yaml`
+- **Purpose**: Track development progress, tasks completed, and current sprint goals
+- **Updates**: After each development step (commit + push)
+
+### Development Phases
+
+#### ✅ ETAPA 1 - Structure Initialization (COMPLETE)
+- Project structure created
+- Hardware documented
+- Model configuration set up
+- MCP servers connected
+
+#### 🚧 ETAPA 2 - User Stories Definition (IN PROGRESS)
+- Creating detailed US for each Epic
+- Defining acceptance criteria
+- Preparing sprint tracking documentation
+
+---
+
+## ⏰ Timeout Management Strategy
+
+Due to hardware limitations (RTX 4050 + Ryzen 7640HS):
+
+1. **Break down tasks** - Max 300 seconds reasoning time per task
+2. **Incremental commits** - Commit after each small step
+3. **Frequent pushes** - Push to GitHub after each commit
+4. **Documentation updates** - Update README + docs before any commit
+
+### Documentation Rule (MANDATORY)
+Before ANY commit, update:
+1. **README.md** - Document progress/POC status
+2. **docs/llm-specs.md** - Model and LLM specifications
+3. **docs/benchmarks.md** - Add new benchmark results/metrics

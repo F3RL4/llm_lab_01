@@ -198,15 +198,42 @@ Este projeto é mantido para fins de benchmark e teste local.
 
 ## 📊 Status do POC
 
+### ✅ Concluído (ETAPA 1 - Estrutura Inicial)
 - ✅ Projeto inicializado com estrutura completa
 - ✅ Hardware documentado (Ryzen 5 7640HS + RTX 4050 6GB)
 - ✅ Modelo configurado: Qwen3.5-9B GGUF via LM Studio
 - ✅ Configurações de inferência definidas
 - ✅ Node.js instalado (v24.16.0)
 - ✅ MCP Servers conectados e prontos para uso
-- ⏳ **Próximo**: Criar testes de benchmark e validação
+- ✅ **EPICS.md** criado com introdução, regras de timeout e arquitetura
+
+### 🚧 Em Desenvolvimento (ETAPA 2 - User Stories Detalhadas)
+- ⏳ Criando EPICS.md completo com todas as USs detalhadas por Epic
+- ⏳ Definindo User Stories para: Core Chat, Dashboard Métricas, Configurações, Integração MCP
+- ⏳ Preparando sprint-status.yaml para tracking de progresso
 
 ---
+
+## 🚀 Próximas Etapas
+
+### ETAPA 2 - User Stories Detalhadas (EM ANDAMENTO)
+- [ ] Criar EPICS.md completo com todas as USs detalhadas
+- [ ] Definir user stories por Epic com critérios de aceitação
+- [ ] Documentar requisitos técnicos para cada US
+
+### ETAPA 3 - Sprint Status & GitHub Issues
+- [ ] Criar sprint-status.yaml para tracking de progresso
+- [ ] Criar Issue no GitHub para cada Epic
+- [ ] Registrar tarefas em sprint-status.yaml
+
+### ETAPA 4 - Implementação das USs
+- [ ] Desenvolver US por US seguindo ordem de prioridade
+- [ ] Atualizar sprint-status.yaml após cada etapa
+- [ ] Commit e push frequente (max 300s por tarefa)
+
+---
+
+## 📊 Stats
 
 ## 📊 Stats
 
