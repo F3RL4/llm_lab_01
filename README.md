@@ -208,8 +208,6 @@ Este projeto é mantido para fins de benchmark e teste local.
 
 ---
 
-> 💡 **Dica**: Sempre que fizer um commit, verifique se a tarefa atual está dentro do limite de 5 minutos de reasoning!
->
 ## 📊 Stats
 
 ![Repobeats analytics](https://repobeats.axiom.co/api/embed/74b416a7c57c7b7eea5ac8a2196cafc396cbaeec.svg 'Repobeats analytics image')
