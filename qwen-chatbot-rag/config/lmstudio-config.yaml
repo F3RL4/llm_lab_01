@@ -1,7 +1,0 @@
-# LM Studio Configuration for Qwen3.5-9B GGUF
-# Hardware: RTX 4050 (6GB VRAM) + 16GB RAM
-
-model_path: "Qwen/Qwen3.5-9B-GGUF/model.gguf"
-gpu_layers: -1  # Use all GPU layers
-n_threads: auto
-num_ctx: 8192
